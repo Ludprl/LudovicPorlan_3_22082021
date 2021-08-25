@@ -17,6 +17,10 @@ a {
         color: black;
     }
 }
+ul {
+    padding: 0;
+    list-style: none;
+}
 body,
 html {
     margin: 0;
@@ -215,5 +219,37 @@ header {
                 }
             }
         }
+    }
+}
+/* Footer */
+
+.footer {
+    width: calc(100% - 40px);
+    margin: 45px 0 0 0;
+    padding: 15px 20px;
+    color: white;
+    background-color: $background-color-footer;
+    &__container {
+        &__icn {
+            padding-right: 10px;
+        }
+    }
+    a {
+        color: white;
+        &:visited {
+            color: white;
+        }
+    }
+    h2 {
+        font-family: Shrikhand;
+        font-size: 14pt;
+        font-weight: 400;
+    }
+    ul > li {
+        display: flex;
+        align-items: center;
+        line-height: 1.7em;
+        font-weight: 500;
+        font-size: 11pt;
     }
 }

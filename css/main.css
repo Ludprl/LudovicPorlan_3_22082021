@@ -11,6 +11,11 @@ a:visited {
   color: black;
 }
 
+ul {
+  padding: 0;
+  list-style: none;
+}
+
 body,
 html {
   margin: 0;
@@ -315,5 +320,44 @@ header {
 
 .resto__item__bar__fav__icn-unchecked:hover .resto__item__bar__fav__icn-checked {
   display: block;
+}
+
+/* Footer */
+.footer {
+  width: calc(100% - 40px);
+  margin: 45px 0 0 0;
+  padding: 15px 20px;
+  color: white;
+  background-color: #353535;
+}
+
+.footer__container__icn {
+  padding-right: 10px;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer a:visited {
+  color: white;
+}
+
+.footer h2 {
+  font-family: Shrikhand;
+  font-size: 14pt;
+  font-weight: 400;
+}
+
+.footer ul > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1.7em;
+  font-weight: 500;
+  font-size: 11pt;
 }
 /*# sourceMappingURL=main.css.map */
