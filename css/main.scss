@@ -3,10 +3,20 @@ $color-one: rgba(147, 86, 220, 1);
 $color-one--10: rgba(147, 86, 220, 0.1);
 $color-two: #ff79da;
 $color-three: #99e2d0;
+$color-text-label: #008766;
 $background-color-main: #fff;
 $background-color-footer: #353535;
 $background-color-grey: #f6f6f6;
 $background-color-dark-grey: #eaeaea;
+
+a {
+    outline: none;
+    display: flex;
+    text-decoration: none;
+    &:visited {
+        color: black;
+    }
+}
 body,
 html {
     margin: 0;
@@ -49,6 +59,7 @@ header {
     height: 50px;
     background-color: $background-color-dark-grey;
 }
+/* Option selon ville  */
 .cityOptions {
     padding: 0 20px 50px 20px;
     background-color: $background-color-grey;
@@ -59,7 +70,7 @@ header {
     text-align: center;
     p,
     h1 {
-        max-width: 90%;
+        max-width: 80%;
     }
     button {
         margin-top: 30px;
@@ -80,16 +91,17 @@ header {
         box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
     }
 }
+/* Tutorial */
 .engineNotice {
     padding: 0 20px;
-    ol {
-        margin: 30px 0px 30px 15px;
-        padding: 0;
-        counter-reset: steps;
-    }
-    .engineNotice__li__icn {
+    &__li__icn {
         color: #7e7e7e;
         margin: 27px;
+    }
+    ol {
+        margin: 30px 0px 68px 15px;
+        padding: 0;
+        counter-reset: steps;
     }
     ol li {
         display: flex;
@@ -99,7 +111,7 @@ header {
         margin: 13px 0;
         list-style: none;
         counter-increment: steps;
-        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.15);
         border-radius: 25px;
         &:hover {
             background-color: $color-one--10;
@@ -116,6 +128,92 @@ header {
             content: counter(steps);
             border-radius: 50%;
             background-color: $color-one;
+        }
+    }
+}
+/* Restaurants */
+.resto {
+    width: calc(100% - 40px);
+    background-color: $background-color-grey;
+    padding: 0px 20px 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    h1 {
+        margin: 60px 0 25px 0;
+    }
+    &__item {
+        background-color: white;
+        max-width: 450px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 25px;
+        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.15);
+
+        &__pic {
+            position: relative;
+            width: 100%;
+            img {
+                width: calc(100%);
+                max-height: 174px;
+                object-fit: cover;
+                border-radius: 25px 25px 0 0;
+            }
+            &__label {
+                background-color: $color-three;
+                width: 80px;
+                height: 29px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                right: 13px;
+                top: 13px;
+                color: $color-text-label;
+                font-size: 0.9em;
+                font-weight: 500;
+            }
+        }
+        &__bar {
+            a {
+                display: flex;
+                flex-grow: 1;
+            }
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 14px;
+            &__infos {
+                flex-grow: 1;
+                &__name {
+                    margin: 15px 0 0 0;
+                    font-size: 13pt;
+                }
+                &__location {
+                    margin: 5px 0 17px 0;
+                    font-weight: 100;
+                    font-size: 12pt;
+                }
+            }
+            &__fav {
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &__icn-checked {
+                    display: none;
+                }
+                &__icn-unchecked {
+                    &:hover {
+                        display: none;
+                        .resto__item__bar__fav__icn-checked {
+                            display: block;
+                        }
+                    }
+                }
+            }
         }
     }
 }
