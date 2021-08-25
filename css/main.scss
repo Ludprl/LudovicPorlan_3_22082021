@@ -139,7 +139,7 @@ header {
 .resto {
     width: calc(100% - 40px);
     background-color: $background-color-grey;
-    padding: 0px 20px 20px 20px;
+    padding: 0px 20px 48px 20px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -153,6 +153,7 @@ header {
         flex-direction: column;
         border-radius: 25px;
         box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.15);
+        margin-bottom: 17px;
 
         &__pic {
             position: relative;
@@ -225,7 +226,6 @@ header {
 
 .footer {
     width: calc(100% - 40px);
-    margin: 45px 0 0 0;
     padding: 15px 20px;
     color: white;
     background-color: $background-color-footer;
