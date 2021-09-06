@@ -30,8 +30,9 @@ html {
 h1 {
     margin: 50px 0 0 0;
 }
+
 /* header */
-header {
+.header {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(1, 1fr);
@@ -39,21 +40,23 @@ header {
     min-height: 63px;
     align-items: center;
     background-color: $background-color-main;
-}
-.header__logo {
-    display: flex;
-    grid-area: 1 / 2 / 2 / 5;
-    justify-content: center;
-    img {
-        width: 100%;
-        max-width: 164px;
-    }
-}
-.header__btn-back {
-    display: none;
-    grid-area: 1 / 1 / 2 / 2;
-    img {
-        width: auto;
+    .header {
+        &__logo {
+            display: flex;
+            grid-area: 1 / 2 / 2 / 5;
+            justify-content: center;
+            img {
+                width: 100%;
+                max-width: 164px;
+            }
+        }
+        &__btn-back {
+            display: none;
+            grid-area: 1 / 1 / 2 / 2;
+            img {
+                width: auto;
+            }
+        }
     }
 }
 .cityMapping {
@@ -210,12 +213,12 @@ header {
                 &__icn-checked {
                     display: none;
                 }
-                &__icn-unchecked {
-                    &:hover {
+                &:hover {
+                    .resto__item__bar__fav__icn-checked {
+                        display: block;
+                    }
+                    .resto__item__bar__fav__icn-unchecked {
                         display: none;
-                        .resto__item__bar__fav__icn-checked {
-                            display: block;
-                        }
                     }
                 }
             }
