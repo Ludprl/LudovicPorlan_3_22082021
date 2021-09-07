@@ -11,6 +11,7 @@ $background-color-dark-grey: #eaeaea;
 
 a {
     outline: none;
+    color: black;
     display: flex;
     text-decoration: none;
     &:visited {
@@ -74,7 +75,6 @@ button {
             }
         }
         &__btn-back {
-            display: none;
             grid-area: 1 / 1 / 2 / 2;
             img {
                 width: auto;

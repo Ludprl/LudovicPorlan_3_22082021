@@ -1,6 +1,7 @@
 /*Colors*/
 a {
   outline: none;
+  color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,7 +88,6 @@ button:hover {
 }
 
 .header .header__btn-back {
-  display: none;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
