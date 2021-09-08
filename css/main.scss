@@ -65,7 +65,6 @@ button {
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    line-height: 100%;
     font-family: Shrikhand, sans-serif;
     font-size: x-large;
     position: fixed;
@@ -78,17 +77,20 @@ button {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        z-index: 9999;
+
         & span {
             padding-bottom: 15px;
         }
     }
     &__spinner {
+        z-index: 9998;
         width: 200px;
         height: 200px;
-        background-color: rgba(255, 255, 255, 0.15);
+        background-color: $background-color-main;
         border-radius: 50%;
-        border: 2px solid rgba(0, 0, 0, 0.15);
-        border-top: solid 2px black;
+        border: 3px solid $color-one--10;
+        border-top: solid 2px $color-one;
         animation: spinner 0.75s infinite;
     }
 }
@@ -99,7 +101,7 @@ button {
     }
     100% {
         visibility: hidden;
-        opacity: 0.85;
+        opacity: 0.95;
     }
 }
 @keyframes spinner {
@@ -271,34 +273,30 @@ button {
                 }
             }
             &__fav {
+                cursor: pointer;
                 width: 50px;
                 height: 50px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                &__icn-checked {
-                    display: none;
-                }
-                &:hover {
-                    .resto__item__bar__fav__icn-checked {
-                        display: block;
-                    }
-                    .resto__item__bar__fav__icn-unchecked {
-                        display: none;
-                    }
-                }
             }
         }
     }
 }
-.gradientIcon,
-.gradientIcon:before {
-    display: inline;
-    color: #9c47fc;
-    display: block;
-    background: -webkit-linear-gradient(#fff, #356ad2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.gradientIcon {
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
+    &:hover {
+        animation: fill 0.3s ease-in-out;
+        display: inline-block;
+        opacity: 1;
+        background: linear-gradient(45deg, $color-two, $color-one);
+        background: -webkit-linear-gradient(45deg, $color-two, $color-one);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+    }
 }
 
 /* Footer */

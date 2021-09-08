@@ -73,7 +73,6 @@ button:hover {
           flex-direction: column;
   width: 100vw;
   height: 100vh;
-  line-height: 100%;
   font-family: Shrikhand, sans-serif;
   font-size: x-large;
   position: fixed;
@@ -98,6 +97,7 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 9999;
 }
 
 .loader__brand span {
@@ -105,12 +105,13 @@ button:hover {
 }
 
 .loader__spinner {
+  z-index: 9998;
   width: 200px;
   height: 200px;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: #fff;
   border-radius: 50%;
-  border: 2px solid rgba(0, 0, 0, 0.15);
-  border-top: solid 2px black;
+  border: 3px solid rgba(147, 86, 220, 0.1);
+  border-top: solid 2px #9356dc;
   -webkit-animation: spinner 0.75s infinite;
           animation: spinner 0.75s infinite;
 }
@@ -122,7 +123,7 @@ button:hover {
   }
   100% {
     visibility: hidden;
-    opacity: 0.85;
+    opacity: 0.95;
   }
 }
 
@@ -133,7 +134,7 @@ button:hover {
   }
   100% {
     visibility: hidden;
-    opacity: 0.85;
+    opacity: 0.95;
   }
 }
 
@@ -420,6 +421,7 @@ button:hover {
 }
 
 .resto__item__bar__fav {
+  cursor: pointer;
   width: 50px;
   height: 50px;
   display: -webkit-box;
@@ -433,26 +435,22 @@ button:hover {
           align-items: center;
 }
 
-.resto__item__bar__fav__icn-checked {
-  display: none;
+.gradientIcon {
+  cursor: pointer;
+  font-size: 20px;
+  color: black;
 }
 
-.resto__item__bar__fav:hover .resto__item__bar__fav__icn-checked {
-  display: block;
-}
-
-.resto__item__bar__fav:hover .resto__item__bar__fav__icn-unchecked {
-  display: none;
-}
-
-.gradientIcon,
-.gradientIcon:before {
-  display: inline;
-  color: #9c47fc;
-  display: block;
-  background: -webkit-linear-gradient(#fff, #356ad2);
+.gradientIcon:hover {
+  -webkit-animation: fill 0.3s ease-in-out;
+          animation: fill 0.3s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background: linear-gradient(45deg, #ff79da, #9356dc);
+  background: -webkit-linear-gradient(45deg, #ff79da, #9356dc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 /* Footer */
