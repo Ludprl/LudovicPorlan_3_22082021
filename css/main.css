@@ -255,6 +255,13 @@ button:hover {
 
 /* Tutorial */
 .engineNotice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 0 20px;
 }
 
@@ -264,6 +271,16 @@ button:hover {
 }
 
 .engineNotice ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 320px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
   margin: 30px 0px 68px 15px;
   padding: 0;
   counter-reset: steps;
@@ -309,27 +326,30 @@ button:hover {
 
 /* Restaurants */
 .resto {
-  width: calc(100% - 40px);
+  width: 100%;
   background-color: #f6f6f6;
-  padding: 0px 20px 48px 20px;
+  padding: 0px 0px 48px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .resto h1 {
-  margin: 60px 0 25px 0;
+  width: 100%;
+  margin: 60px 0 25px 20px;
 }
 
 .resto__item {
   background-color: white;
   max-width: 450px;
+  min-width: 340px;
+  margin: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
