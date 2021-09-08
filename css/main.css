@@ -437,13 +437,13 @@ button:hover {
 
 .gradientIcon {
   cursor: pointer;
-  font-size: 20px;
+  font-size: 1.5rem;
   color: black;
 }
 
 .gradientIcon:hover {
-  -webkit-animation: fill 0.3s ease-in-out;
-          animation: fill 0.3s ease-in-out;
+  -webkit-animation: fill 0.3s;
+          animation: fill 0.3s;
   display: inline-block;
   opacity: 1;
   background: linear-gradient(45deg, #ff79da, #9356dc);
@@ -451,6 +451,24 @@ button:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
+}
+
+@-webkit-keyframes fill {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fill {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Footer */

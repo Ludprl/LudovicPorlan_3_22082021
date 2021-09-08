@@ -285,10 +285,10 @@ button {
 }
 .gradientIcon {
     cursor: pointer;
-    font-size: 20px;
+    font-size: 1.5rem;
     color: black;
     &:hover {
-        animation: fill 0.3s ease-in-out;
+        animation: fill 0.3s;
         display: inline-block;
         opacity: 1;
         background: linear-gradient(45deg, $color-two, $color-one);
@@ -296,6 +296,14 @@ button {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: bold;
+    }
+}
+@keyframes fill {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
