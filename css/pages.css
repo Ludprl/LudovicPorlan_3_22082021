@@ -33,7 +33,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 40px 0 20px;
+  margin: 0 40px 20px 20px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -54,8 +54,18 @@
 }
 
 .menu {
-  padding: 20px 20px;
   background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
 .menu li {
@@ -71,10 +81,34 @@
   margin-bottom: 14px;
   -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
-  max-width: 400px;
+  width: 310px;
 }
 
-.menu__sub {
+.menu button {
+  max-width: 186px;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-bottom: 58px;
+}
+
+.menu__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.menu__wrap__sub {
+  margin: 20px 20px 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,19 +118,20 @@
           flex-direction: column;
 }
 
-.menu__sub h4 {
+.menu__wrap__sub h4 {
   text-transform: uppercase;
   font-weight: 300;
+  margin-top: 0px;
   margin-bottom: 8px;
 }
 
-.menu__sub__line {
+.menu__wrap__sub__line {
   height: 3px;
   background-color: #99e2d0;
   width: 40px;
 }
 
-.menu__sub__name {
+.menu__wrap__sub__name {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -115,7 +150,7 @@
   text-overflow: ellipsis;
 }
 
-.menu__sub__name h4 {
+.menu__wrap__sub__name h4 {
   text-transform: inherit;
   white-space: nowrap;
   overflow: hidden;
@@ -125,7 +160,7 @@
   margin: 0px 0px 7px 0px;
 }
 
-.menu__sub__name span {
+.menu__wrap__sub__name span {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -133,7 +168,7 @@
   font-weight: 300;
 }
 
-.menu__sub__price {
+.menu__wrap__sub__price {
   width: 10%;
   font-size: 11pt;
   font-weight: 500;
@@ -149,7 +184,7 @@
           justify-content: flex-end;
 }
 
-.menu__sub__price span {
+.menu__wrap__sub__price span {
   text-overflow: ellipsis;
 }
 
