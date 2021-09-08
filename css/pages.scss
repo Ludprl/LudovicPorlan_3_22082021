@@ -51,7 +51,7 @@ $color-three: #99e2d0;
         padding: 15px 15px 15px 15px;
         margin-bottom: 14px;
         box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
-        width: 310px;
+        width: 306px;
     }
     & button {
         max-width: 186px;
@@ -62,8 +62,11 @@ $color-three: #99e2d0;
     }
     &__wrap {
         display: flex;
+        width: 100%;
         flex-wrap: wrap;
         flex-direction: row;
+        max-width: 1440px;
+        justify-content: center;
         &__sub {
             margin: 20px 20px 0 20px;
             display: flex;
@@ -125,7 +128,6 @@ $color-three: #99e2d0;
     animation: itemAppear 1s;
     animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
     animation-fill-mode: both;
-    transform: scale(1);
 
     &__confirmation {
         background-color: $color-three;
@@ -180,5 +182,12 @@ $color-three: #99e2d0;
 @for $i from 0 to 10 {
     .time-#{$i} {
         animation-delay: #{$i/10}s;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .restoMain__title {
+        width: 1070px;
+        align-self: center;
     }
 }
