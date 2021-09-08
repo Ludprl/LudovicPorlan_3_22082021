@@ -115,7 +115,10 @@ button {
 
 /* header */
 .header {
+    margin: auto;
     display: grid;
+    max-width: 1120px;
+    align-self: center;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(1, 1fr);
     padding: 0 20px;

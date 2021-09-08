@@ -162,8 +162,12 @@ button:hover {
 
 /* header */
 .header {
+  margin: auto;
   display: -ms-grid;
   display: grid;
+  max-width: 1120px;
+  -ms-grid-row-align: center;
+      align-self: center;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
   -ms-grid-rows: (1fr)[1];
