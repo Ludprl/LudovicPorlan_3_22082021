@@ -223,7 +223,7 @@ button:hover {
   background-color: #eaeaea;
 }
 
-.cityMapping svg {
+.cityMapping i {
   margin-right: 18px;
   margin-left: -18px;
 }
@@ -486,7 +486,7 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  line-height: 1.7em;
+  line-height: 1.8rem;
   font-weight: 500;
   font-size: 11pt;
 }

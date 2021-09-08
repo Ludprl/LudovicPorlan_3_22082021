@@ -147,7 +147,7 @@ button {
     align-content: center;
     height: 50px;
     background-color: $background-color-dark-grey;
-    & svg {
+    & i {
         margin-right: 18px;
         margin-left: -18px;
     }
@@ -325,7 +325,7 @@ button {
     ul > li {
         display: flex;
         align-items: center;
-        line-height: 1.7em;
+        line-height: 1.8rem;
         font-weight: 500;
         font-size: 11pt;
     }
