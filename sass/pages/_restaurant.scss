@@ -1,6 +1,5 @@
-$background-color-grey: #f6f6f6;
-$color-three: #99e2d0;
-
+@use 'sass:math';
+@use "sass:list";
 .restoMain {
     background-color: $background-color-grey;
     display: flex;
@@ -179,9 +178,10 @@ $color-three: #99e2d0;
 }
 
 /* Delay Animation */
+
 @for $i from 0 to 10 {
     .time-#{$i} {
-        animation-delay: #{$i/10}s;
+        animation-delay: #{math.div($i, 8)}s;
     }
 }
 

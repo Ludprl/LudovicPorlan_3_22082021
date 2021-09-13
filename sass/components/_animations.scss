@@ -1,0 +1,29 @@
+/*Intro - Loader*/
+
+@keyframes loader {
+    0% {
+        visibility: visible;
+        opacity: 0.95;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0.95;
+    }
+}
+@keyframes spinner {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/*.Fill heart animation.*/
+@keyframes fill {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

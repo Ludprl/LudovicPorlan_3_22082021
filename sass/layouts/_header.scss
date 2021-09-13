@@ -1,0 +1,42 @@
+/* header */
+.header {
+    margin: auto;
+    display: grid;
+    max-width: 1120px;
+    align-self: center;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    padding: 0 20px;
+    min-height: 63px;
+    align-items: center;
+    background-color: $background-color-main;
+    .header {
+        &__logo {
+            display: flex;
+            grid-area: 1 / 2 / 2 / 5;
+            justify-content: center;
+            img {
+                width: 100%;
+                max-width: 164px;
+            }
+        }
+        &__btn-back {
+            grid-area: 1 / 1 / 2 / 2;
+            img {
+                width: auto;
+            }
+        }
+    }
+}
+.cityMapping {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 50px;
+    background-color: $background-color-dark-grey;
+    & i {
+        margin-right: 18px;
+        margin-left: -18px;
+    }
+}

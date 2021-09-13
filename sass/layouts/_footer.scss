@@ -1,0 +1,48 @@
+/* Footer */
+
+.footer {
+    width: calc(100% - 40px);
+    padding: 15px 20px;
+    color: white;
+    background-color: $background-color-footer;
+    &__container {
+        &__icn {
+            padding-right: 10px;
+        }
+    }
+    a {
+        color: white;
+        &:visited {
+            color: white;
+        }
+    }
+    h2 {
+        font-family: Shrikhand;
+        font-size: 14pt;
+        font-weight: 400;
+        margin: 16px 0 0 0;
+    }
+    ul > li {
+        display: flex;
+        align-items: center;
+        line-height: 1.8rem;
+        font-weight: 500;
+        font-size: 11pt;
+    }
+    @media screen and (min-width: 1024px) {
+        ul {
+            display: flex;
+            justify-content: space-between;
+        }
+        li {
+            margin: 0 20px;
+        }
+        display: flex;
+        justify-content: center;
+        &__container {
+            width: 1120px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

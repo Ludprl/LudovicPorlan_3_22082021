@@ -1,0 +1,18 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2 {
+    margin: 50px 0 0 0px;
+}
+
+a {
+    outline: none;
+    color: black;
+    display: flex;
+    text-decoration: none;
+    &:visited {
+        color: black;
+    }
+}
