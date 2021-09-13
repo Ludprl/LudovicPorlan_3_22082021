@@ -4,12 +4,12 @@
 @import "base/base";
 @import "base/typography";
 
-@import "./layouts/container";
+@import "layouts/container";
 @import "layouts/header";
 @import "layouts/footer";
 
-@import "./components/loader";
-@import "./components/animations";
+@import "components/loader";
+@import "components/animations";
 @import "components/buttons";
 
 @import "pages/home";
