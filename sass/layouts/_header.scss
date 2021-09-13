@@ -5,30 +5,53 @@
     max-width: 1120px;
     align-self: center;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    padding: 0 20px;
+    grid-template-rows: 63px repeat(1, 1fr);
     min-height: 63px;
     align-items: center;
     background-color: $background-color-main;
-    .header {
-        &__logo {
-            display: flex;
-            grid-area: 1 / 2 / 2 / 5;
+    &__logo {
+        font-family: Shrikhand;
+        font-size: 1.7rem;
+        display: flex;
+        grid-area: 1 / 2 / 1 / 5;
+        box-shadow: black;
+        a {
+            width: 100%;
+            height: 63px;
             justify-content: center;
-            img {
-                width: 100%;
-                max-width: 164px;
-            }
+            align-items: center;
         }
-        &__btn-back {
-            grid-area: 1 / 1 / 2 / 2;
-            img {
-                width: auto;
-            }
+        @include media-min("desktop-up") {
+            grid-area: 1 / 1 / 1 / 1;
+            font-size: 2.7rem;
+        }
+        @include media-min("tablet-up") {
+            font-size: 2rem;
         }
     }
+    &__btn-back {
+        a {
+            margin: 0 20px;
+            height: 63px;
+            width: 30%;
+            align-items: center;
+            grid-area: 1 / 1 / 2 / 2;
+        }
+        img {
+            width: auto;
+        }
+        @include media-min("desktop-up") {
+            display: none;
+        }
+    }
+    @include media-min("desktop-up") {
+        padding: 0 20px;
+        grid-template-rows: 83px repeat(1, 1fr);
+    }
 }
+
 .cityMapping {
+    grid-area: 2 / 1 / 2 / 6;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -38,5 +61,10 @@
     & i {
         margin-right: 18px;
         margin-left: -18px;
+    }
+    @include media-min("desktop-up") {
+        grid-area: 1 / 6 / 1 / 6;
+        background-color: white;
+        margin-right: 10px;
     }
 }

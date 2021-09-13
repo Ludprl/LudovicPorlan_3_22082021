@@ -1,4 +1,5 @@
 /*Colors*/
+/*breakpoints*/
 /*Colors*/
 ul {
   padding: 0;
@@ -38,29 +39,59 @@ a:visited {
   max-width: 1120px;
   align-self: center;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  padding: 0 20px;
+  grid-template-rows: 63px repeat(1, 1fr);
   min-height: 63px;
   align-items: center;
   background-color: #fff;
 }
-.header .header__logo {
+.header__logo {
+  font-family: Shrikhand;
+  font-size: 1.7rem;
   display: flex;
-  grid-area: 1/2/2/5;
-  justify-content: center;
+  grid-area: 1/2/1/5;
+  box-shadow: black;
 }
-.header .header__logo img {
+.header__logo a {
   width: 100%;
-  max-width: 164px;
+  height: 63px;
+  justify-content: center;
+  align-items: center;
 }
-.header .header__btn-back {
+@media screen and (min-width: 1024px) {
+  .header__logo {
+    grid-area: 1/1/1/1;
+    font-size: 2.7rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    font-size: 2rem;
+  }
+}
+.header__btn-back a {
+  margin: 0 20px;
+  height: 63px;
+  width: 30%;
+  align-items: center;
   grid-area: 1/1/2/2;
 }
-.header .header__btn-back img {
+.header__btn-back img {
   width: auto;
+}
+@media screen and (min-width: 1024px) {
+  .header__btn-back {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 0 20px;
+    grid-template-rows: 83px repeat(1, 1fr);
+  }
 }
 
 .cityMapping {
+  grid-area: 2/1/2/6;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -71,6 +102,13 @@ a:visited {
 .cityMapping i {
   margin-right: 18px;
   margin-left: -18px;
+}
+@media screen and (min-width: 1024px) {
+  .cityMapping {
+    grid-area: 1/6/1/6;
+    background-color: white;
+    margin-right: 10px;
+  }
 }
 
 /* Footer */
