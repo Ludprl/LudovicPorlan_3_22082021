@@ -20,3 +20,21 @@ button {
         filter: brightness(107%);
     }
 }
+
+/*Coeur Favoris*/
+.gradientIcon {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: black;
+    &:hover {
+        animation: fill 0.3s;
+        display: inline-block;
+        opacity: 1;
+        background: linear-gradient(45deg, $color-two, $color-one);
+        background: -webkit-linear-gradient(45deg, $color-two, $color-one);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        background-clip: text;
+    }
+}
